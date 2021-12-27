@@ -14,7 +14,6 @@ public class main {
             C
             }
 
-            String currLine;
 
 
         // importing the txt file
@@ -27,38 +26,44 @@ public class main {
         System.out.println("B - Unsorted Lists");
         System.out.println("C - Unsorted and foreign lists");
 
+        //recieving the heap type wer'e working with
         String status = scanner.nextLine();
         Mode mode = Mode.valueOf(status);
+
+
+        //initialize array of linked lists from the class we want to work with -TODO
+
         
-        
-        // while(scanner.hasNextLine()){
+        if(mode.equals(Mode.A)){
+            System.out.println("a");
+            sortedLists listsArr
+            // TODO - create array of sortedLists objects
+            // call it "listsArr"
+        } else if(mode.equals(Mode.B)){
+            System.out.println("b");
+             // TODO - create array of UnsortedLists objects
+                // call it "listsArr"
+ 
+        } else if(mode.equals(Mode.C)){
+            System.out.println("c");
+            // TODO - create array of foreignUnsortedLists objeccts
+            // call it "listsArr"
+        }
+
+                    String currLine;
+
+
+        while(scanner.hasNext()){
+           currLine = scanner.nextLine();
+           listsArr.handleLine(currLine); // will get the line and will handle with it include printing
+
+
+        }
+        // while(scanner.hasNext()){
         //     currLine = scanner.nextLine();
-        
-
-        switch(mode) {
-            case A:
-            
-           classA.operate(scanner);
-  
+        //     heap.analyze(currLine);
+        // }
           
-              break;
-            case B:
+        }
 
-           classB.operate(scanner);  
-           
-          
-              break;
-            case C:
-            
-            classC.operate(scanner);
-            
-        
-              break;
-          }
-               
-
-        
-        
-
-    }
 }
