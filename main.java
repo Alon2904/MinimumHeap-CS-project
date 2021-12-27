@@ -36,7 +36,6 @@ public class main {
         
         if(mode.equals(Mode.A)){
             System.out.println("a");
-            sortedLists listsArr
             // TODO - create array of sortedLists objects
             // call it "listsArr"
         } else if(mode.equals(Mode.B)){
@@ -46,6 +45,7 @@ public class main {
  
         } else if(mode.equals(Mode.C)){
             System.out.println("c");
+
             // TODO - create array of foreignUnsortedLists objeccts
             // call it "listsArr"
         }
@@ -55,7 +55,7 @@ public class main {
 
         while(scanner.hasNext()){
            currLine = scanner.nextLine();
-           listsArr.handleLine(currLine); // will get the line and will handle with it include printing
+           object.handleLine(currLine); // will get the line and will handle with it include printing
 
 
         }
