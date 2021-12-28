@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import javax.swing.plaf.synth.SynthLabelUI;
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
+import java.util.*;
+
 
 public class main {
     public static void main(String[] args) throws FileNotFoundException{
@@ -36,26 +41,35 @@ public class main {
         
         if(mode.equals(Mode.A)){
             System.out.println("a");
-            // TODO - create array of sortedLists objects
-            // call it "listsArr"
+           sortedLists[ ] listsArr = new sortedLists[100]; // creating array of sorted lists
         } else if(mode.equals(Mode.B)){
             System.out.println("b");
-             // TODO - create array of UnsortedLists objects
-                // call it "listsArr"
+             unsortedLists[ ] listsArr = new unsortedLists[100];
  
         } else if(mode.equals(Mode.C)){
             System.out.println("c");
+            foreignUnsortedLists[ ] listsArr = new foreignUnsortedLists[100]  ;
+
+            System.out.println(listsArr);
+            listsArr[0] = new foreignUnsortedLists();
+            System.out.println(listsArr[0]);
 
             // TODO - create array of foreignUnsortedLists objeccts
             // call it "listsArr"
         }
 
                     String currLine;
+                    int index = 0; //index of current linkedlist
 
 
         while(scanner.hasNext()){
            currLine = scanner.nextLine();
-           object.handleLine(currLine); // will get the line and will handle with it include printing
+
+           if(currLine.equals("MakeHeap")){
+           LinkedList x = new LinkedList();
+           
+           System.out.println("sucsses");
+           }
 
 
         }
