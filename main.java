@@ -1,9 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 import javax.swing.plaf.synth.SynthLabelUI;
 import javax.swing.plaf.synth.SynthOptionPaneUI;
 
@@ -11,13 +7,9 @@ import java.util.*;
 
 
 public class main {
-    public static void main(String[] args) throws FileNotFoundException{
+    public static void main(String[] args) throws Exception{
         // a/b/c defines the linked-list status
-        enum Mode {
-            A, 
-            B,
-            C
-            }
+        
 
 
 
@@ -33,40 +25,39 @@ public class main {
 
         //recieving the heap type wer'e working with
         String status = scanner.nextLine();
-        Mode mode = Mode.valueOf(status);
-
-
-        //initialize array of linked lists from the class we want to work with -TODO
-
         
-        if(mode.equals(Mode.A)){
+
+        LinkedList[] arrOfLists;
+
+        switch (status.toLowerCase()) {
+            case "a":
             System.out.println("a");
-           sortedLists[ ] listsArr = new sortedLists[100]; // creating array of sorted lists
-        } else if(mode.equals(Mode.B)){
+            arrOfLists = new sortedLists[100];
+                break;
+
+            case "b":
             System.out.println("b");
-             unsortedLists[ ] listsArr = new unsortedLists[100];
- 
-        } else if(mode.equals(Mode.C)){
+            arrOfLists = new unsortedLists[100];
+                break;
+
+            case "c":
             System.out.println("c");
-            foreignUnsortedLists[ ] listsArr = new foreignUnsortedLists[100]  ;
+            arrOfLists = new foreignUnsortedLists[100];
+                break;
 
-            System.out.println(listsArr);
-            listsArr[0] = new foreignUnsortedLists();
-            System.out.println(listsArr[0]);
-
-            // TODO - create array of foreignUnsortedLists objeccts
-            // call it "listsArr"
+            default:
+                throw new Exception("Invalid input detected");
         }
 
                     String currLine;
                     int index = 0; //index of current linkedlist
-
+                    
 
         while(scanner.hasNext()){
            currLine = scanner.nextLine();
-
+                "Insert 9"
            if(currLine.equals("MakeHeap")){
-           LinkedList x = new LinkedList();
+           arrOfLists[0] = new foreignUnsortedLists();
            
            System.out.println("sucsses");
            }
