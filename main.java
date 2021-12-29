@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import javax.swing.plaf.synth.SynthLabelUI;
 import javax.swing.plaf.synth.SynthOptionPaneUI;
 
-import java.util.*;
+import java.util.Scanner;
 
 
 public class main {
@@ -26,49 +26,72 @@ public class main {
         //recieving the heap type wer'e working with
         String status = scanner.nextLine();
         
-
-        LinkedList[] arrOfLists;
-
-        switch (status.toLowerCase()) {
-            case "a":
-            System.out.println("a");
-            arrOfLists = new sortedLists[100];
-                break;
-
-            case "b":
-            System.out.println("b");
-            arrOfLists = new unsortedLists[100];
-                break;
-
-            case "c":
-            System.out.println("c");
-            arrOfLists = new foreignUnsortedLists[100];
-                break;
-
-            default:
-                throw new Exception("Invalid input detected");
-        }
+        HeapLinkedList[] arrOfLists = new HeapLinkedList[100];
+       
+       
 
                     String currLine;
-                    int index = 0; //index of current linkedlist
+                    int index = -1; //index of current linkedlist
                     
-
+                    
         while(scanner.hasNext()){
            currLine = scanner.nextLine();
-                "Insert 9"
+
+           // TODO - add a function to make it look nicer
            if(currLine.equals("MakeHeap")){
-           arrOfLists[0] = new foreignUnsortedLists();
-           
-           System.out.println("sucsses");
-           }
+            index++;
+            HeapLinkedList list;
+            switch(status) {
+                case "A":
+                list = new sortedLists();
+                System.out.println("A");
+                
 
+                case "B":
+                list = new unsortedLists();
+                System.out.println("B");
+                
 
+                case "C":
+                list = new foreignUnsortedLists();
+                System.out.println("C");
+                
+
+            
+
+            
+            arrOfLists[index] = list;
+           System.out.println("input - MakeHeap");
+           System.out.println(arrOfLists[index]);
         }
-        // while(scanner.hasNext()){
-        //     currLine = scanner.nextLine();
-        //     heap.analyze(currLine);
-        // }
-          
-        }
+    }
+
+    while(scanner.hasNext()){
+        currLine = scanner.nextLine();
+        // TODO - create a function that will take care of merge, insert,min,extraxtMin
+    }
 
 }
+
+
+           
+
+
+
+           
+
+
+        
+       
+          
+}
+public void analyze(Heap list,String str){
+
+
+}
+}
+
+
+
+
+
