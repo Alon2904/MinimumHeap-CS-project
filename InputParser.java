@@ -38,11 +38,13 @@ public class InputParser {
         }
         else if (input.contains("Insert")) {
             String [] splittedLine = input.split(" ");
-            if(splittedLine[0].equals("Insert") && isNumeric(splittedLine[1]));
+            if(splittedLine[0].equals("Insert") && isNumeric(splittedLine[1])){
+                
             int value = Integer.parseInt(splittedLine[1]);
+            System.out.println("Input: Insert " + value);
             x[index].insert(value, index);
-            System.out.println("this is the heap after operation " + x[index].getClass());
-            
+             x[index].toPrint();
+            }
         }
     }
 
@@ -55,12 +57,12 @@ public class InputParser {
      int value;
      try {
         value = Integer.parseInt(str);
-        System.out.println("its a number! :    " + value);
+        
         return true;
       } 
       
       catch (NumberFormatException e) {
-          System.out.println("its not a number!");
+          System.out.println("Input invalid");
         return false;
     }
         
