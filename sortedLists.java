@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class sortedLists extends HeapLinkedList implements Heap{
+public class sortedLists extends HeapLinkedList {
 
     @Override
     public Node insert(int value,int i) {

@@ -8,7 +8,7 @@ import java.util.LinkedList;
 
 
 
-public class unsortedLists extends HeapLinkedList implements Heap {
+public class unsortedLists extends HeapLinkedList {
 
     @Override
     public Node insert(int value,int i) {
