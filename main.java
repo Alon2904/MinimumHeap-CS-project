@@ -30,12 +30,12 @@ public class main {
         
         HeapLinkedList[] arrOfLists = new HeapLinkedList[100];
         String currLine;
-        int index = -1; //index of current linkedlist
+       
                     
         InputParser parser = new InputParser();
                     
         while(scanner.hasNext()){
-            parser.parse(scanner.nextLine(),status,index,arrOfLists);
+            parser.parse(scanner.nextLine(),status,arrOfLists);
         
 
         }

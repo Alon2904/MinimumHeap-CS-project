@@ -54,14 +54,7 @@ class BaseLinkedList {
         }
     }
 
-    public void print() {
-        Node current = this.first;
+   
 
-        while (current.next != null) {
-            System.out.print(current.value + " ");
-            current = current.next;
-        }
-
-        System.out.println("");
-    }
+ 
 }

@@ -1,7 +1,8 @@
 
 public class InputParser {
+    int index = -1;
 
-    public void parse(String input,String status, int index, HeapLinkedList [] x){
+    public void parse(String input,String status, HeapLinkedList [] x){
         
         if (input.equals("MakeHeap")) {
             HeapLinkedList list = new HeapLinkedList();
@@ -38,7 +39,10 @@ public class InputParser {
         else if (input.contains("Insert")) {
             String [] splittedLine = input.split(" ");
             if(splittedLine[0].equals("Insert") && isNumeric(splittedLine[1]));
-            System.out.println("Input:  Insert " + "int number");
+            int value = Integer.parseInt(splittedLine[1]);
+            x[index].insert(value, index);
+            System.out.println("this is the heap after operation " + x[index].getClass());
+            
         }
     }
 
@@ -51,10 +55,12 @@ public class InputParser {
      int value;
      try {
         value = Integer.parseInt(str);
+        System.out.println("its a number! :    " + value);
         return true;
       } 
       
       catch (NumberFormatException e) {
+          System.out.println("its not a number!");
         return false;
     }
         
