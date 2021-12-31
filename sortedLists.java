@@ -4,13 +4,27 @@ public class sortedLists extends HeapLinkedList {
 
     @Override
     public Node insert(int value,int i) {
-        Node inserted = super.insert(value,i);
+        Node node  = new Node(value);
+        node.value = value;
 
-        // TODO: Sort node logic
+       int x = 0;
 
-        return inserted;
-    }
-  
-}
+       if(this.size() > 0){
+
+        while(x<this.size() && value>this.getInIndex(x).value){
+
+            x++;
+       } 
+       }
+
+       
+        
+       
+       
+            
+             this.add(x, node);
+             return node;
+            }
+        }
 
 // 
