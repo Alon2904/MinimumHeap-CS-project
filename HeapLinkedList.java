@@ -32,5 +32,9 @@ public class HeapLinkedList extends LinkedList {
         }
         System.out.println("");
     }
+
+    public boolean isValueUsed(){
+        //create a method that checks if the value already inserted in this list or other lists
+    }
     
 }
