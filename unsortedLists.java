@@ -17,8 +17,14 @@ public class unsortedLists extends HeapLinkedList {
         // TODO: Sort node logic
 
         return inserted;
+}
+            
+
+
+        // TODO: Sort node logic
+
+      
 
         
 
-}
 }
