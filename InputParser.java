@@ -45,7 +45,15 @@ public class InputParser {
             x[index].insert(value, index);
              x[index].toPrint();
             }
+        } else if(input.contains("Merge")){
+            String [] splittedLine = input.split(" ");
+            if(splittedLine[0].equals("Merge") && isNumeric(splittedLine[1]) && isNumeric(splittedLine[2])) {
+
+                int index;
+            }
         }
+
+
     }
 
     private void handleMakeHeap() {
