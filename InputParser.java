@@ -63,13 +63,7 @@ public class InputParser {
     }
 
 
-    public boolean isNumeric(String str) {
-     int value;
-     try {
-        value = Integer.parseInt(str);
-        
-        return true;
-      } 
+   
       
       catch (NumberFormatException e) {
           System.out.println("Input invalid");
