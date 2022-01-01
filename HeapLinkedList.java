@@ -33,15 +33,34 @@ public class HeapLinkedList extends LinkedList {
         System.out.println("");
     }
 
-    static boolean isValidToMerge() {
-        //will check if the input is correct
+    static boolean isValidToMerge(String [] splittedLine,String status,int index) {
+        //will check if the input is correct 
+        int list1 = Integer.parseInt(splittedLine[1]);
+        int list2 = Integer.parseInt(splittedLine[2]);
+        if(splittedLine[0].equals("Merge") && 
+        list1 <= index &&
+        list2 <= index &&
+        list1 != list2){
+            return true;
+        } else
+        return false;
     }
 
     static HeapLinkedList merge() {
         //will merge 2 lists given by index in the input and will return a new heap object contatins the merge
     }
 
-    }
+    
   
     
+
+
+public static boolean isNumeric(String str) {
+    int value;
+    try {
+       value = Integer.parseInt(str);
+       
+       return true;
+     } 
+    }
 }
