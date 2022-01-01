@@ -33,8 +33,15 @@ public class HeapLinkedList extends LinkedList {
         System.out.println("");
     }
 
-    public boolean isValueUsed(){
-        //create a method that checks if the value already inserted in this list or other lists
+    static boolean isValidToMerge() {
+        //will check if the input is correct
     }
+
+    static HeapLinkedList merge() {
+        //will merge 2 lists given by index in the input and will return a new heap object contatins the merge
+    }
+
+    }
+  
     
 }
