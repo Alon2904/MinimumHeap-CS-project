@@ -1,3 +1,10 @@
-C
+A
 MakeHeap
-Insert 7
+Insert 100
+Insert 80
+Insert 120
+
+MakeHeap
+Insert 20
+Insert 10
+Merge 0 1

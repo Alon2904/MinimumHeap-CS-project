@@ -18,6 +18,7 @@ public class main {
         Scanner scanner = new Scanner(input);
 
         //prints option for user
+        System.out.println("-----------------------------------------------------------");
         System.out.println("Please Choose one of the following options by sending the capital letter to its left:");
         System.out.println("A - Sorted lists");
         System.out.println("B - Unsorted Lists");

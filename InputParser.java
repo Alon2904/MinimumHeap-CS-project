@@ -38,7 +38,7 @@ public class InputParser {
         }
         else if (input.contains("Insert")) {
             String [] splittedLine = input.split(" ");
-            if(splittedLine[0].equals("Insert") && isNumeric(splittedLine[1])){
+            if(splittedLine[0].equals("Insert") && HeapLinkedList.isNumeric(splittedLine[1])){
                 
             int value = Integer.parseInt(splittedLine[1]);
             System.out.println("Input: Insert " + value);
@@ -47,10 +47,13 @@ public class InputParser {
             }
         } else if(input.contains("Merge")){
             String [] splittedLine = input.split(" ");
-                if(isValidToMerge(splittedLine,status)){
+                if(HeapLinkedList.isValidToMerge(splittedLine,status,index)){
                     index++;
-                x[index] = merge(splittedLine,status,index);
+                    int index1 = Integer.parseInt(splittedLine[1]);
+                    int index2 = Integer.parseInt(splittedLine[2]);
 
+                //method will return a list
+                x[index] = HeapLinkedList.merge(x[index1],x[index2],status);
                 }
             }
         }
@@ -65,12 +68,9 @@ public class InputParser {
 
    
       
-      catch (NumberFormatException e) {
-          System.out.println("Input invalid");
-        return false;
-    }
+ 
         
-}
+
    
 
 

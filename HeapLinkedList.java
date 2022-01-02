@@ -33,7 +33,7 @@ public class HeapLinkedList extends LinkedList {
         System.out.println("");
     }
 
-    static boolean isValidToMerge(String [] splittedLine,String status,int index) {
+    public static boolean isValidToMerge(String [] splittedLine,String status,int index) {
         //will check if the input is correct 
         int list1 = Integer.parseInt(splittedLine[1]);
         int list2 = Integer.parseInt(splittedLine[2]);
@@ -46,8 +46,28 @@ public class HeapLinkedList extends LinkedList {
         return false;
     }
 
-    static HeapLinkedList merge() {
-        //will merge 2 lists given by index in the input and will return a new heap object contatins the merge
+    public static HeapLinkedList merge(HeapLinkedList first, HeapLinkedList second, String status) {
+        HeapLinkedList merged = new HeapLinkedList();
+    switch (status) {
+        case "A":
+        merged =(sortedLists) sortedLists.merge((sortedLists) first, (sortedLists) second);
+        
+        break;
+
+
+        case "B":
+        merged =(unsortedLists) unsortedLists.merge((unsortedLists) first, (unsortedLists) second);
+
+        break;
+
+        case "C":
+        merged = (foreignUnsortedLists) foreignUnsortedLists.merge((foreignUnsortedLists) first,(foreignUnsortedLists) second);
+
+        break;
+    }
+
+    return merged;
+
     }
 
     
@@ -61,6 +81,9 @@ public static boolean isNumeric(String str) {
        value = Integer.parseInt(str);
        
        return true;
-     } 
+     }      catch (NumberFormatException e) {
+        System.out.println("Input invalid");
+      return false;
+  }
     }
 }
