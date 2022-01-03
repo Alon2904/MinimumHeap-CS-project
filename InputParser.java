@@ -8,23 +8,23 @@ public class InputParser {
             HeapLinkedList list = new HeapLinkedList();
             // TODO: Make heap logic
             index++;
-                
+                System.out.println("----------------------------------------------");
                 switch(status) {
                     case "A":
                     list = new sortedLists();
-                    System.out.println("Input Selected: A");
+                    System.out.println("Input Selected: A - Sorted List");
                     break;
                     
     
                     case "B":
                     list = new unsortedLists();
-                    System.out.println("Input Selected: B");
+                    System.out.println("Input Selected: B - Unsorted List");
                     break;
                     
     
                     case "C":
                     list = new foreignUnsortedLists();
-                    System.out.println("Input Selected: C");
+                    System.out.println("Input Selected: C - Foriegn Unsorted List");
                     break;
               
             }
@@ -33,7 +33,6 @@ public class InputParser {
                System.out.println("Heap before operation:   " + x[index]);
                x[index] =  list;
                System.out.println("Heap after operation:    " + x[index]);
-               System.out.println("----------------------------------------------");
             
         }
         else if (input.contains("Insert")) {
@@ -41,6 +40,7 @@ public class InputParser {
             if(splittedLine[0].equals("Insert") && HeapLinkedList.isNumeric(splittedLine[1])){
                 
             int value = Integer.parseInt(splittedLine[1]);
+            System.out.println("----------------------------------------------");
             System.out.println("Input: Insert " + value);
             x[index].insert(value, index,x);
              x[index].toPrint();
@@ -52,6 +52,7 @@ public class InputParser {
                     index++;
                     int index1 = Integer.parseInt(splittedLine[1]);
                     int index2 = Integer.parseInt(splittedLine[2]);
+                    System.out.println("----------------------------------------------");
                     System.out.println("Input: Merge " + index1 + " " + index2);
 
                 //method will return a list

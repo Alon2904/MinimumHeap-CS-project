@@ -88,7 +88,7 @@ public static boolean isNumeric(String str) {
     }
 
 public boolean isOnList(int value) {
-        for(int i = 0;i<this.size()-1;i++) {
+        for(int i = 0;i<this.size();i++) {
             if(this.getInIndex(i).value == value) {
                 return true;
             }
