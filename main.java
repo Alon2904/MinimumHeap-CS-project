@@ -3,25 +3,18 @@ import java.io.FileNotFoundException;
 import javax.swing.plaf.synth.SynthLabelUI;
 import javax.swing.plaf.synth.SynthOptionPaneUI;
 
+import Inputmanaging.InputParser;
 import linkedListHandeling.HeapLinkedList;
-import linkedListHandeling.InputParser;
 
 import java.util.Scanner;
 
-/**
+/**Runs the commands given by txt file using the InputParser
  * @author Alon Cohen
  */
 
 
 public class main {
-    /**
-    This program creats sorted/unsorted/foriegn and unsroted(foreign - two different lists can't have the same value)
-      and coresponding to user commands like "MakeHeap", "Insert", "Merge".
-      The input of the program will be in a txt file name "input.txt" and will have to be stored in the same folder with the program.
-      The first two arguments 
-     * @param args
-     * @throws Exception
-     */
+    
     public static void main(String[] args) throws Exception{
         // a/b/c defines the linked-list status
         
@@ -44,10 +37,11 @@ public class main {
         //recieving the heap type wer'e working with
         String status = scanner.nextLine();
         
+        //Initializing array to hold all of the lists to be created
         HeapLinkedList[] arrOfLists = new HeapLinkedList[100];
         String currLine;
        
-                    
+        //this object will handle all of the input lines
         InputParser parser = new InputParser();
                     
         while(scanner.hasNext()){

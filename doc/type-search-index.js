@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"linkedListHandeling","l":"foreignUnsortedLists"},{"p":"linkedListHandeling","l":"HeapLinkedList"},{"p":"<Unnamed>","l":"main"},{"p":"linkedListHandeling","l":"Node"},{"p":"linkedListHandeling","l":"sortedLists"},{"p":"linkedListHandeling","l":"unsortedLists"}];updateSearchResults();

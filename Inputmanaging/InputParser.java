@@ -1,16 +1,32 @@
-package linkedListHandeling;
+package Inputmanaging;
 
+import linkedListHandeling.HeapLinkedList;
+import linkedListHandeling.foreignUnsortedLists;
+import linkedListHandeling.sortedLists;
+import linkedListHandeling.unsortedLists;
+
+
+/**
+ * @author Alon Cohen
+ * 
+ * The class holds methods needed to analyze the program input. the method will be able to operate
+ sub methodes through the InpurParser object
+ * 
+ */
 public class InputParser {
+    //index will be used iterate through the different lists in the the array that holds them
     int index = -1;
 
     
-    /** 
-     * @param input
-     * @param status
-     * @param x
+    /** This very main method will operate all of the other sub classes
+     * @param input - Line from the txt file
+     * @param status - one of the letters A/B/C that represents the kind of lists were working with
+     * @param x - Array that holds all of the created lists
      */
     public void parse(String input,String status, HeapLinkedList [] x){
         
+
+        //makeheap handeling
         if (input.equals("MakeHeap")) {
             HeapLinkedList list = new HeapLinkedList();
             // TODO: Make heap logic
@@ -41,9 +57,12 @@ public class InputParser {
                x[index] =  list;
                System.out.println("Heap after operation:    " + x[index]);
             
-        }
+        } // insert handeling
         else if (input.contains("Insert")) {
+
+            //splitting the txt line into 2 parts and sotre it in array
             String [] splittedLine = input.split(" ");
+            //checks if the input is valid
             if(splittedLine[0].equals("Insert") && HeapLinkedList.isNumeric(splittedLine[1])){
                 
             int value = Integer.parseInt(splittedLine[1]);
@@ -52,9 +71,14 @@ public class InputParser {
             x[index].insert(value, index,x);
              x[index].toPrint();
             }
+
+            //merge handeling
         } else if(input.contains("Merge")){
             
+            //splitting the input into 3 parts
             String [] splittedLine = input.split(" ");
+
+            //checking input validty
                 if(HeapLinkedList.isValidToMerge(splittedLine,status,index)){
                     index++;
                     int index1 = Integer.parseInt(splittedLine[1]);
@@ -72,10 +96,7 @@ public class InputParser {
 
     
 
-    private void handleMakeHeap() {
-
-    }
-
+  
 
    
       
@@ -86,9 +107,5 @@ public class InputParser {
 
 
     }
-    // private void handleInsert(string input) {
-    //     // TODO: Split string on space
-    //     // TODO: Check the second split index is numeric
-    //     // Insert 8
-    // }
+  
 

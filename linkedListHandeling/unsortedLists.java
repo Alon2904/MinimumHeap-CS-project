@@ -9,15 +9,17 @@ import java.util.LinkedList;
 
 
 
-
+/**Represent unsorted lists
+ * 
+ */
 public class unsortedLists extends HeapLinkedList {
 
     
-    /** 
-     * @param value
-     * @param i
-     * @param x
-     * @return Node
+   /** Inserting a given value into the list in unsroted order
+     * @param value - inserted value
+     * @param index - current list index
+     * @param x - array that holds the lists
+     * @return Node - the inserted node
      */
     @Override
     public Node insert(int value,int i,HeapLinkedList [] x) {
@@ -29,9 +31,9 @@ public class unsortedLists extends HeapLinkedList {
 }
             
 
-/** 
- * @param first
- * @param second
+/** merging to unsorted lists in unsorted order
+ * @param first - first list to merge
+ * @param second - second list to merge
  * @return unsortedLists
  */
 public static unsortedLists merge(unsortedLists first, unsortedLists second) {

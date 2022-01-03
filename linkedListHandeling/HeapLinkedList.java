@@ -2,13 +2,17 @@
 package linkedListHandeling;
 import java.util.LinkedList;
 
+/** Represent Parent class for all of the other lists classes.
+ 
+ * 
+ */
 public class HeapLinkedList extends LinkedList {
     
-    /** 
-     * @param value
-     * @param i
-     * @param x
-     * @return Node
+    /** creating a node and assinging the given value to the node and than adding it to the list
+     * @param value - given value
+     * @param i - not used on that method. method is overiden in other parts of the program
+     * @param x - array that hold the lists
+     * @return Node - inserted node
      */
     public Node insert(int value,int i,HeapLinkedList [] x) {
         Node node  = new Node(value);
@@ -33,9 +37,9 @@ public class HeapLinkedList extends LinkedList {
    
 
     
-    /** 
-     * @param index
-     * @return Node
+    /** Returns the node in the i index of the list
+     * @param index 
+     * @return Node 
      */
     public Node getInIndex(int index) {
         Node indexed = (Node) super.get(index);
@@ -43,6 +47,9 @@ public class HeapLinkedList extends LinkedList {
         return indexed;
     }
 
+    /**Printing the HeapLinkedList 
+     * 
+     */
     public void toPrint() {
         System.out.print("Current Heap:  ");
         for(int i = 0;i<this.size();i++){
@@ -52,11 +59,11 @@ public class HeapLinkedList extends LinkedList {
     }
 
     
-    /** 
-     * @param splittedLine
-     * @param status
-     * @param index
-     * @return boolean
+    /** Checking if the given array contains valid values to use later in "merge" method
+     * @param splittedLine - array that holds that values
+     * @param status - indicate what kind of list were working with
+     * @param index - current list index in lists array
+     * @return boolean - if arguments are valid
      */
     public static boolean isValidToMerge(String [] splittedLine,String status,int index) {
         //will check if the input is correct 
@@ -72,10 +79,11 @@ public class HeapLinkedList extends LinkedList {
     }
 
     
-    /** 
-     * @param first
-     * @param second
-     * @param status
+    /** will merge 2 lists by given indexes. assuming input is valid due to "isValidToMerge" method
+     the method will call sub classes overiiden methods
+     * @param first - first list to merge
+     * @param second - second list to merge
+     * @param status - indicate what kind of list were working with
      * @return HeapLinkedList
      */
     public static HeapLinkedList merge(HeapLinkedList first, HeapLinkedList second, String status) {
@@ -108,9 +116,9 @@ public class HeapLinkedList extends LinkedList {
 
 
 
-/** 
- * @param str
- * @return boolean
+/** checks if the given String is a number
+ * @param str -
+ * @return boolean - returns true if string is int
  */
 public static boolean isNumeric(String str) {
     int value;
@@ -125,9 +133,9 @@ public static boolean isNumeric(String str) {
     }
 
 
-/** 
+/** Checks if the given value already inserted into another list
  * @param value
- * @return boolean
+ * @return boolean return true if it is
  */
 public boolean isOnList(int value) {
         for(int i = 0;i<this.size();i++) {
