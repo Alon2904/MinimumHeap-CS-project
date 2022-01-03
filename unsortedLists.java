@@ -10,6 +10,13 @@ import java.util.LinkedList;
 
 public class unsortedLists extends HeapLinkedList {
 
+    
+    /** 
+     * @param value
+     * @param i
+     * @param x
+     * @return Node
+     */
     @Override
     public Node insert(int value,int i,HeapLinkedList [] x) {
         Node inserted = super.insert(value,i,x);
@@ -19,6 +26,12 @@ public class unsortedLists extends HeapLinkedList {
         return inserted;
 }
             
+
+/** 
+ * @param first
+ * @param second
+ * @return unsortedLists
+ */
 public static unsortedLists merge(unsortedLists first, unsortedLists second) {
     unsortedLists merged = new unsortedLists();
     first.addAll(second);

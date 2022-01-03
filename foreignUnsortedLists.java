@@ -7,6 +7,13 @@ import java.util.LinkedList;
 
 
 public class foreignUnsortedLists extends HeapLinkedList {
+    
+    /** 
+     * @param value
+     * @param index
+     * @param x
+     * @return Node
+     */
     @Override
     public Node insert(int value,int index,HeapLinkedList [] x) {
         for(int i=0;i<=index;i++){
@@ -22,6 +29,12 @@ public class foreignUnsortedLists extends HeapLinkedList {
         return inserted;
 }
 
+
+/** 
+ * @param first
+ * @param second
+ * @return foreignUnsortedLists
+ */
 public static foreignUnsortedLists merge(foreignUnsortedLists first, foreignUnsortedLists second) {
     foreignUnsortedLists merged = new foreignUnsortedLists();
     first.addAll(second);

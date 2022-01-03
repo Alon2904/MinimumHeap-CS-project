@@ -1,6 +1,13 @@
 import java.util.LinkedList;
 
 public class HeapLinkedList extends LinkedList {
+    
+    /** 
+     * @param value
+     * @param i
+     * @param x
+     * @return Node
+     */
     public Node insert(int value,int i,HeapLinkedList [] x) {
         Node node  = new Node(value);
         node.value = value;
@@ -10,6 +17,10 @@ public class HeapLinkedList extends LinkedList {
     }
     
 
+    
+    /** 
+     * @return Node
+     */
     public Node getFirst() {
         Node first = (Node) super.getFirst();
 
@@ -19,6 +30,11 @@ public class HeapLinkedList extends LinkedList {
 
    
 
+    
+    /** 
+     * @param index
+     * @return Node
+     */
     public Node getInIndex(int index) {
         Node indexed = (Node) super.get(index);
 
@@ -33,6 +49,13 @@ public class HeapLinkedList extends LinkedList {
         System.out.println("");
     }
 
+    
+    /** 
+     * @param splittedLine
+     * @param status
+     * @param index
+     * @return boolean
+     */
     public static boolean isValidToMerge(String [] splittedLine,String status,int index) {
         //will check if the input is correct 
         int list1 = Integer.parseInt(splittedLine[1]);
@@ -46,6 +69,13 @@ public class HeapLinkedList extends LinkedList {
         return false;
     }
 
+    
+    /** 
+     * @param first
+     * @param second
+     * @param status
+     * @return HeapLinkedList
+     */
     public static HeapLinkedList merge(HeapLinkedList first, HeapLinkedList second, String status) {
         HeapLinkedList merged = new HeapLinkedList();
     switch (status) {
@@ -75,6 +105,11 @@ public class HeapLinkedList extends LinkedList {
     
 
 
+
+/** 
+ * @param str
+ * @return boolean
+ */
 public static boolean isNumeric(String str) {
     int value;
     try {
@@ -87,6 +122,11 @@ public static boolean isNumeric(String str) {
   }
     }
 
+
+/** 
+ * @param value
+ * @return boolean
+ */
 public boolean isOnList(int value) {
         for(int i = 0;i<this.size();i++) {
             if(this.getInIndex(i).value == value) {

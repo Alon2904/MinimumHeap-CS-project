@@ -4,6 +4,13 @@ import java.util.ListIterator;
 
 public class sortedLists extends HeapLinkedList {
 
+    
+    /** 
+     * @param value
+     * @param i
+     * @param x
+     * @return Node
+     */
     @Override
     public Node insert(int value,int i, HeapLinkedList [] x) {
         Node node  = new Node(value);
@@ -24,6 +31,12 @@ public class sortedLists extends HeapLinkedList {
              return node;
             }
 
+            
+            /** 
+             * @param first
+             * @param second
+             * @return sortedLists
+             */
             public static sortedLists merge(sortedLists first, sortedLists second) {
                sortedLists merged = new sortedLists();
                 first.addLast(null);

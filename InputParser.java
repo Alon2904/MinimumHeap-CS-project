@@ -2,6 +2,12 @@
 public class InputParser {
     int index = -1;
 
+    
+    /** 
+     * @param input
+     * @param status
+     * @param x
+     */
     public void parse(String input,String status, HeapLinkedList [] x){
         
         if (input.equals("MakeHeap")) {
