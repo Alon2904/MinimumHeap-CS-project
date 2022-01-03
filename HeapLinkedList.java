@@ -60,10 +60,10 @@ public class HeapLinkedList extends LinkedList {
 
         break;
 
-        case "C":
-        merged = (foreignUnsortedLists) foreignUnsortedLists.merge((foreignUnsortedLists) first,(foreignUnsortedLists) second);
+        // case "C":
+        // merged = (foreignUnsortedLists) foreignUnsortedLists.merge((foreignUnsortedLists) first,(foreignUnsortedLists) second);
 
-        break;
+        // break;
     }
 
     return merged;

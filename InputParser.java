@@ -46,14 +46,17 @@ public class InputParser {
              x[index].toPrint();
             }
         } else if(input.contains("Merge")){
+            
             String [] splittedLine = input.split(" ");
                 if(HeapLinkedList.isValidToMerge(splittedLine,status,index)){
                     index++;
                     int index1 = Integer.parseInt(splittedLine[1]);
                     int index2 = Integer.parseInt(splittedLine[2]);
+                    System.out.println("Input: Merge " + index1 + " " + index2);
 
                 //method will return a list
                 x[index] = HeapLinkedList.merge(x[index1],x[index2],status);
+                x[index].toPrint();
                 }
             }
         }
