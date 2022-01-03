@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 
 public class HeapLinkedList extends LinkedList {
-    public Node insert(int value,int i) {
+    public Node insert(int value,int i,HeapLinkedList [] x) {
         Node node  = new Node(value);
         node.value = value;
         this.add(node);
@@ -60,10 +60,10 @@ public class HeapLinkedList extends LinkedList {
 
         break;
 
-        // case "C":
-        // merged = (foreignUnsortedLists) foreignUnsortedLists.merge((foreignUnsortedLists) first,(foreignUnsortedLists) second);
+        case "C":
+        merged = (foreignUnsortedLists) foreignUnsortedLists.merge((foreignUnsortedLists) first,(foreignUnsortedLists) second);
 
-        // break;
+        break;
     }
 
     return merged;
@@ -86,4 +86,13 @@ public static boolean isNumeric(String str) {
       return false;
   }
     }
+
+public boolean isOnList(int value) {
+        for(int i = 0;i<this.size()-1;i++) {
+            if(this.getInIndex(i).value == value) {
+                return true;
+            }
+        }
+        return false;
+}
 }

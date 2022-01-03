@@ -42,7 +42,7 @@ public class InputParser {
                 
             int value = Integer.parseInt(splittedLine[1]);
             System.out.println("Input: Insert " + value);
-            x[index].insert(value, index);
+            x[index].insert(value, index,x);
              x[index].toPrint();
             }
         } else if(input.contains("Merge")){
