@@ -5,26 +5,22 @@ import java.util.ListIterator;
 public class sortedLists extends HeapLinkedList {
 
     @Override
-    public Node insert(int value,int i) {
+    public Node insert(int value,int i, HeapLinkedList [] x) {
         Node node  = new Node(value);
         node.value = value;
 
-       int x = 0;
+       int j = 0;
 
        if(this.size() > 0){
 
-        while(x<this.size() && value>this.getInIndex(x).value){
+        while(j<this.size() && value>this.getInIndex(j).value){
 
-            x++;
+            j++;
        } 
        }
 
-       
-        
-       
-       
-            
-             this.add(x, node);
+          
+             this.add(j, node);
              return node;
             }
 
@@ -35,8 +31,7 @@ public class sortedLists extends HeapLinkedList {
                ListIterator firstIterator = first.listIterator(0);
                ListIterator secondIterator = second.listIterator(0);
 
-               int i = 0;
-               int j = 0;
+            
                
                Node firstNode = (Node) firstIterator.next();
                Node secondNode = (Node) secondIterator.next();
@@ -52,7 +47,14 @@ public class sortedLists extends HeapLinkedList {
                         merged.add(secondNode);
                         secondNode = (Node) secondIterator.next();
                         
-                    } } else if(!secondIterator.hasNext() && firstIterator.hasNext()) {
+                    } else if(firstNode.value == secondNode.value){
+                        merged.add(secondNode);
+                        secondNode = (Node) secondIterator.next();
+                        firstNode = (Node) firstIterator.next();
+
+
+                        
+                    }}else if(!secondIterator.hasNext() && firstIterator.hasNext()) {
                         merged.add(firstNode);
                         firstNode = (Node) firstIterator.next();
                     } else if(!firstIterator.hasNext() && secondIterator.hasNext()) {
@@ -60,24 +62,15 @@ public class sortedLists extends HeapLinkedList {
                         secondNode = (Node) secondIterator.next();
                         
                     }
+       
+               
+               
+            
+            }//out wwhile
 
-
-                   
-                    
-                    }
-                    
-                     //treating left nodes on first list
-
-                    //treating left values on second list
-                
-
-
-                
+            merged.toPrint();
                         return merged;
-               }
-               
-               
-            }
-        
+            }//function
+        }//class
 
 // 
