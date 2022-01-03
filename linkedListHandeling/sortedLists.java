@@ -93,5 +93,14 @@ public class sortedLists extends HeapLinkedList {
             merged.toPrint();
                         return merged;
             }
+
+            /**
+             * returns minimum value in the list
+             * @return min - minimum value in the list
+             */
+            public int min(){
+                int min = this.getFirst().value;
+                return min;
+            }
         }
 

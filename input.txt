@@ -16,3 +16,6 @@ Insert 400
 Merge 0 1
 Merge 0 2
 
+Minimum
+
+asdf

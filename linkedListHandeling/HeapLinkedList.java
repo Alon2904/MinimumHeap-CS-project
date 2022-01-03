@@ -8,6 +8,7 @@ import java.util.LinkedList;
  */
 public class HeapLinkedList extends LinkedList {
     
+    
     /** creating a node and assinging the given value to the node and than adding it to the list
      * @param value - given value
      * @param i - not used on that method. method is overiden in other parts of the program
@@ -143,6 +144,24 @@ public boolean isOnList(int value) {
                 return true;
             }
         }
-        return false;
+     
+       return false;
 }
+
+/**Returns the minimum value in the list
+ * 
+ * @return min - minimum value in the list
+ */
+public int min(){
+    int min = this.getInIndex(0).value;
+    for(int i = 1;i<this.size();i++){
+        if(this.getInIndex(i).value<min){
+            min = this.getInIndex(i).value;
+        }
+    }
+    return min;
+}
+
+
+
 }

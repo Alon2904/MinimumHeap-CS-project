@@ -48,5 +48,18 @@ public static foreignUnsortedLists merge(foreignUnsortedLists first, foreignUnso
 
     
 }
+/**Returns the minimum value in the list
+ * 
+ * @return min - minimum value in the list
+ */
+public int min(){
+    int min = this.getInIndex(0).value;
+    for(int i = 1;i<this.size();i++){
+        if(this.getInIndex(i).value<min){
+            min = this.getInIndex(i).value;
+        }
+    }
+    return min;
+}
 }
 

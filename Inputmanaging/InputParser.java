@@ -90,6 +90,24 @@ public class InputParser {
                 x[index] = HeapLinkedList.merge(x[index1],x[index2],status);
                 x[index].toPrint();
                 }
+
+            } else if(input.equals("Minimum")) {
+                int min = x[index].min();
+                System.out.println("----------------------------------------------");
+
+                System.out.println("Input: Minimum");
+                System.out.println("value returned: " + min);
+
+
+            } else if(input.equals("ExtractMin")) {
+                int min = x[index].extractMin();
+                System.out.println("----------------------------------------------");
+
+                System.out.println("Input: ExtractMin");
+                System.out.println("value returned: " + min);
+
+            } else {
+                System.out.println("Input Invalid - " + input);
             }
         }
 
