@@ -1,5 +1,5 @@
 import java.util.LinkedList;
-
+import java.util.ListIterator;
 import java.util.LinkedList;
 
 
@@ -11,15 +11,21 @@ import java.util.LinkedList;
 public class unsortedLists extends HeapLinkedList {
 
     @Override
-    public Node insert(int value,int i) {
-        Node inserted = super.insert(value,i);
+    public Node insert(int value,int i,HeapLinkedList [] x) {
+        Node inserted = super.insert(value,i,x);
 
         // TODO: Sort node logic
 
         return inserted;
 }
             
+public static unsortedLists merge(unsortedLists first, unsortedLists second) {
+    unsortedLists merged = new unsortedLists();
+    first.addAll(second);
 
+    return first;
+
+        }
 
         // TODO: Sort node logic
 
