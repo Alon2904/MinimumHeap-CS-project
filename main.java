@@ -3,6 +3,9 @@ import java.io.FileNotFoundException;
 import javax.swing.plaf.synth.SynthLabelUI;
 import javax.swing.plaf.synth.SynthOptionPaneUI;
 
+import linkedListHandeling.HeapLinkedList;
+import linkedListHandeling.InputParser;
+
 import java.util.Scanner;
 
 /**
@@ -54,36 +57,6 @@ public class main {
         }
            
 
-        //    // TODO - add a function to make it look nicer
-        //    if(currLine.equals("MakeHeap")){
-        //     index++;
-        //     HeapLinkedList list;
-        //     switch(status) {
-        //         case "A":
-        //         list = new sortedLists();
-        //         System.out.println("A");
-        //         break;
-                
-
-        //         case "B":
-        //         list = new unsortedLists();
-        //         System.out.println("B");
-        //         break;
-                
-
-        //         case "C":
-        //         list = new foreignUnsortedLists();
-        //         System.out.println("C");
-        //         break;
-                
-
-            
-
-            
-        //     arrOfLists[index] = list;
-        //    System.out.println("input - MakeHeap");
-        //    System.out.println(arrOfLists[index]);
-        // }
     
 
  
